@@ -1,0 +1,969 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.6.2": {
+      "McMaster.Extensions.CommandLineUtils/2.2.1": {
+        "type": "package",
+        "dependencies": {
+          "System.ValueTuple": "4.4.0"
+        },
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations"
+        ],
+        "compile": {
+          "lib/net45/McMaster.Extensions.CommandLineUtils.dll": {}
+        },
+        "runtime": {
+          "lib/net45/McMaster.Extensions.CommandLineUtils.dll": {}
+        }
+      },
+      "Newtonsoft.Json/9.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "NuGet.Common/4.6.2": {
+        "type": "package",
+        "dependencies": {
+          "NuGet.Frameworks": "4.6.2"
+        },
+        "frameworkAssemblies": [
+          "System.Core",
+          "System.IO.Compression"
+        ],
+        "compile": {
+          "lib/net46/NuGet.Common.dll": {}
+        },
+        "runtime": {
+          "lib/net46/NuGet.Common.dll": {}
+        }
+      },
+      "NuGet.Configuration/4.6.2": {
+        "type": "package",
+        "dependencies": {
+          "NuGet.Common": "4.6.2"
+        },
+        "frameworkAssemblies": [
+          "System.Security",
+          "System.Xml",
+          "System.Xml.Linq"
+        ],
+        "compile": {
+          "lib/net46/NuGet.Configuration.dll": {}
+        },
+        "runtime": {
+          "lib/net46/NuGet.Configuration.dll": {}
+        }
+      },
+      "NuGet.DependencyResolver.Core/4.6.2": {
+        "type": "package",
+        "dependencies": {
+          "NuGet.Frameworks": "4.6.2",
+          "NuGet.LibraryModel": "4.6.2",
+          "NuGet.Protocol": "4.6.2"
+        },
+        "compile": {
+          "lib/net46/NuGet.DependencyResolver.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net46/NuGet.DependencyResolver.Core.dll": {}
+        }
+      },
+      "NuGet.Frameworks/4.6.2": {
+        "type": "package",
+        "compile": {
+          "lib/net46/NuGet.Frameworks.dll": {}
+        },
+        "runtime": {
+          "lib/net46/NuGet.Frameworks.dll": {}
+        }
+      },
+      "NuGet.LibraryModel/4.6.2": {
+        "type": "package",
+        "dependencies": {
+          "NuGet.Common": "4.6.2",
+          "NuGet.Frameworks": "4.6.2",
+          "NuGet.Versioning": "4.6.2"
+        },
+        "compile": {
+          "lib/net46/NuGet.LibraryModel.dll": {}
+        },
+        "runtime": {
+          "lib/net46/NuGet.LibraryModel.dll": {}
+        }
+      },
+      "NuGet.Packaging/4.6.2": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "9.0.1",
+          "NuGet.Common": "4.6.2",
+          "NuGet.Packaging.Core": "4.6.2"
+        },
+        "frameworkAssemblies": [
+          "System.IO.Compression",
+          "System.Security",
+          "System.Xml",
+          "System.Xml.Linq"
+        ],
+        "compile": {
+          "lib/net46/NuGet.Packaging.dll": {}
+        },
+        "runtime": {
+          "lib/net46/NuGet.Packaging.dll": {}
+        }
+      },
+      "NuGet.Packaging.Core/4.6.2": {
+        "type": "package",
+        "dependencies": {
+          "NuGet.Common": "4.6.2",
+          "NuGet.Frameworks": "4.6.2",
+          "NuGet.Versioning": "4.6.2"
+        },
+        "frameworkAssemblies": [
+          "System.IO.Compression",
+          "System.Xml",
+          "System.Xml.Linq"
+        ],
+        "compile": {
+          "lib/net46/NuGet.Packaging.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net46/NuGet.Packaging.Core.dll": {}
+        }
+      },
+      "NuGet.ProjectModel/4.6.2": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "9.0.1",
+          "NuGet.DependencyResolver.Core": "4.6.2"
+        },
+        "compile": {
+          "lib/net46/NuGet.ProjectModel.dll": {}
+        },
+        "runtime": {
+          "lib/net46/NuGet.ProjectModel.dll": {}
+        }
+      },
+      "NuGet.Protocol/4.6.2": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "9.0.1",
+          "NuGet.Configuration": "4.6.2",
+          "NuGet.Packaging": "4.6.2",
+          "System.Runtime.InteropServices": "4.3.0"
+        },
+        "frameworkAssemblies": [
+          "System.IO.Compression",
+          "System.IdentityModel",
+          "System.Net.Http",
+          "System.Net.Http.WebRequest",
+          "System.ServiceModel"
+        ],
+        "compile": {
+          "lib/net46/NuGet.Protocol.dll": {}
+        },
+        "runtime": {
+          "lib/net46/NuGet.Protocol.dll": {}
+        }
+      },
+      "NuGet.Versioning/4.6.2": {
+        "type": "package",
+        "compile": {
+          "lib/net46/NuGet.Versioning.dll": {}
+        },
+        "runtime": {
+          "lib/net46/NuGet.Versioning.dll": {}
+        }
+      },
+      "OpenSoftware.DgmlBuilder/1.12.0": {
+        "type": "package",
+        "dependencies": {
+          "System.ValueTuple": "4.4.0"
+        },
+        "compile": {
+          "lib/net45/OpenSoftware.DgmlBuilder.dll": {}
+        },
+        "runtime": {
+          "lib/net45/OpenSoftware.DgmlBuilder.dll": {}
+        }
+      },
+      "System.Runtime/4.3.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.ComponentModel.Composition",
+          "System.Core",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net462/System.Runtime.dll": {}
+        },
+        "runtime": {
+          "lib/net462/System.Runtime.dll": {}
+        }
+      },
+      "System.Runtime.InteropServices/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net462/System.Runtime.InteropServices.dll": {}
+        },
+        "runtime": {
+          "lib/net462/System.Runtime.InteropServices.dll": {}
+        }
+      },
+      "System.ValueTuple/4.4.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.ValueTuple.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.ValueTuple.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.6.2/win7-x86": {
+      "McMaster.Extensions.CommandLineUtils/2.2.1": {
+        "type": "package",
+        "dependencies": {
+          "System.ValueTuple": "4.4.0"
+        },
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations"
+        ],
+        "compile": {
+          "lib/net45/McMaster.Extensions.CommandLineUtils.dll": {}
+        },
+        "runtime": {
+          "lib/net45/McMaster.Extensions.CommandLineUtils.dll": {}
+        }
+      },
+      "Newtonsoft.Json/9.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "NuGet.Common/4.6.2": {
+        "type": "package",
+        "dependencies": {
+          "NuGet.Frameworks": "4.6.2"
+        },
+        "frameworkAssemblies": [
+          "System.Core",
+          "System.IO.Compression"
+        ],
+        "compile": {
+          "lib/net46/NuGet.Common.dll": {}
+        },
+        "runtime": {
+          "lib/net46/NuGet.Common.dll": {}
+        }
+      },
+      "NuGet.Configuration/4.6.2": {
+        "type": "package",
+        "dependencies": {
+          "NuGet.Common": "4.6.2"
+        },
+        "frameworkAssemblies": [
+          "System.Security",
+          "System.Xml",
+          "System.Xml.Linq"
+        ],
+        "compile": {
+          "lib/net46/NuGet.Configuration.dll": {}
+        },
+        "runtime": {
+          "lib/net46/NuGet.Configuration.dll": {}
+        }
+      },
+      "NuGet.DependencyResolver.Core/4.6.2": {
+        "type": "package",
+        "dependencies": {
+          "NuGet.Frameworks": "4.6.2",
+          "NuGet.LibraryModel": "4.6.2",
+          "NuGet.Protocol": "4.6.2"
+        },
+        "compile": {
+          "lib/net46/NuGet.DependencyResolver.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net46/NuGet.DependencyResolver.Core.dll": {}
+        }
+      },
+      "NuGet.Frameworks/4.6.2": {
+        "type": "package",
+        "compile": {
+          "lib/net46/NuGet.Frameworks.dll": {}
+        },
+        "runtime": {
+          "lib/net46/NuGet.Frameworks.dll": {}
+        }
+      },
+      "NuGet.LibraryModel/4.6.2": {
+        "type": "package",
+        "dependencies": {
+          "NuGet.Common": "4.6.2",
+          "NuGet.Frameworks": "4.6.2",
+          "NuGet.Versioning": "4.6.2"
+        },
+        "compile": {
+          "lib/net46/NuGet.LibraryModel.dll": {}
+        },
+        "runtime": {
+          "lib/net46/NuGet.LibraryModel.dll": {}
+        }
+      },
+      "NuGet.Packaging/4.6.2": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "9.0.1",
+          "NuGet.Common": "4.6.2",
+          "NuGet.Packaging.Core": "4.6.2"
+        },
+        "frameworkAssemblies": [
+          "System.IO.Compression",
+          "System.Security",
+          "System.Xml",
+          "System.Xml.Linq"
+        ],
+        "compile": {
+          "lib/net46/NuGet.Packaging.dll": {}
+        },
+        "runtime": {
+          "lib/net46/NuGet.Packaging.dll": {}
+        }
+      },
+      "NuGet.Packaging.Core/4.6.2": {
+        "type": "package",
+        "dependencies": {
+          "NuGet.Common": "4.6.2",
+          "NuGet.Frameworks": "4.6.2",
+          "NuGet.Versioning": "4.6.2"
+        },
+        "frameworkAssemblies": [
+          "System.IO.Compression",
+          "System.Xml",
+          "System.Xml.Linq"
+        ],
+        "compile": {
+          "lib/net46/NuGet.Packaging.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net46/NuGet.Packaging.Core.dll": {}
+        }
+      },
+      "NuGet.ProjectModel/4.6.2": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "9.0.1",
+          "NuGet.DependencyResolver.Core": "4.6.2"
+        },
+        "compile": {
+          "lib/net46/NuGet.ProjectModel.dll": {}
+        },
+        "runtime": {
+          "lib/net46/NuGet.ProjectModel.dll": {}
+        }
+      },
+      "NuGet.Protocol/4.6.2": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "9.0.1",
+          "NuGet.Configuration": "4.6.2",
+          "NuGet.Packaging": "4.6.2",
+          "System.Runtime.InteropServices": "4.3.0"
+        },
+        "frameworkAssemblies": [
+          "System.IO.Compression",
+          "System.IdentityModel",
+          "System.Net.Http",
+          "System.Net.Http.WebRequest",
+          "System.ServiceModel"
+        ],
+        "compile": {
+          "lib/net46/NuGet.Protocol.dll": {}
+        },
+        "runtime": {
+          "lib/net46/NuGet.Protocol.dll": {}
+        }
+      },
+      "NuGet.Versioning/4.6.2": {
+        "type": "package",
+        "compile": {
+          "lib/net46/NuGet.Versioning.dll": {}
+        },
+        "runtime": {
+          "lib/net46/NuGet.Versioning.dll": {}
+        }
+      },
+      "OpenSoftware.DgmlBuilder/1.12.0": {
+        "type": "package",
+        "dependencies": {
+          "System.ValueTuple": "4.4.0"
+        },
+        "compile": {
+          "lib/net45/OpenSoftware.DgmlBuilder.dll": {}
+        },
+        "runtime": {
+          "lib/net45/OpenSoftware.DgmlBuilder.dll": {}
+        }
+      },
+      "System.Runtime/4.3.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.ComponentModel.Composition",
+          "System.Core",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net462/System.Runtime.dll": {}
+        },
+        "runtime": {
+          "lib/net462/System.Runtime.dll": {}
+        }
+      },
+      "System.Runtime.InteropServices/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net462/System.Runtime.InteropServices.dll": {}
+        },
+        "runtime": {
+          "lib/net462/System.Runtime.InteropServices.dll": {}
+        }
+      },
+      "System.ValueTuple/4.4.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.ValueTuple.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.ValueTuple.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "McMaster.Extensions.CommandLineUtils/2.2.1": {
+      "sha512": "ItcHPuApPMavct52ISZOYdlw9YliegQa7H9Fy6AFbPAPE+tyJz0NAZR9uLZd71zGWtYCYHyrmHXXCYB++XL1hQ==",
+      "type": "package",
+      "path": "mcmaster.extensions.commandlineutils/2.2.1",
+      "files": [
+        "lib/net45/McMaster.Extensions.CommandLineUtils.dll",
+        "lib/net45/McMaster.Extensions.CommandLineUtils.xml",
+        "lib/netstandard1.6/McMaster.Extensions.CommandLineUtils.dll",
+        "lib/netstandard1.6/McMaster.Extensions.CommandLineUtils.xml",
+        "lib/netstandard2.0/McMaster.Extensions.CommandLineUtils.dll",
+        "lib/netstandard2.0/McMaster.Extensions.CommandLineUtils.xml",
+        "mcmaster.extensions.commandlineutils.2.2.1.nupkg.sha512",
+        "mcmaster.extensions.commandlineutils.nuspec"
+      ]
+    },
+    "Newtonsoft.Json/9.0.1": {
+      "sha512": "U82mHQSKaIk+lpSVCbWYKNavmNH1i5xrExDEquU1i6I5pV6UMOqRnJRSlKO3cMPfcpp0RgDY+8jUXHdQ4IfXvw==",
+      "type": "package",
+      "path": "newtonsoft.json/9.0.1",
+      "files": [
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.9.0.1.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "tools/install.ps1"
+      ]
+    },
+    "NuGet.Common/4.6.2": {
+      "sha512": "gd+jtgLe6ZqKXp7aD8DqFPfisGeG4CAic2anJwWshRNYdEJcxbaI0Wu1DHPlwWa7/vFodJULLdliR7UC++moUw==",
+      "type": "package",
+      "path": "nuget.common/4.6.2",
+      "files": [
+        ".signature.p7s",
+        "lib/net46/NuGet.Common.dll",
+        "lib/net46/NuGet.Common.xml",
+        "lib/netstandard1.3/NuGet.Common.dll",
+        "lib/netstandard1.3/NuGet.Common.xml",
+        "nuget.common.4.6.2.nupkg.sha512",
+        "nuget.common.nuspec"
+      ]
+    },
+    "NuGet.Configuration/4.6.2": {
+      "sha512": "CLvZpMUNAawvevDiWZehTURXFAJvuyJQkTr8RnCEWd921zP9HFwEmdHbVSmrSjhxNGdTT/IcgQ8d7XatUgelig==",
+      "type": "package",
+      "path": "nuget.configuration/4.6.2",
+      "files": [
+        ".signature.p7s",
+        "lib/net46/NuGet.Configuration.dll",
+        "lib/net46/NuGet.Configuration.xml",
+        "lib/netstandard1.3/NuGet.Configuration.dll",
+        "lib/netstandard1.3/NuGet.Configuration.xml",
+        "nuget.configuration.4.6.2.nupkg.sha512",
+        "nuget.configuration.nuspec"
+      ]
+    },
+    "NuGet.DependencyResolver.Core/4.6.2": {
+      "sha512": "fIdnk52kBFFy1U1eNOmaZVW4dOgAY1W45cvTCJ4HbddQe2R+RBXHAI/K2zEknOqm1TyWnqxbj/vEtkVh2ox/0A==",
+      "type": "package",
+      "path": "nuget.dependencyresolver.core/4.6.2",
+      "files": [
+        ".signature.p7s",
+        "lib/net46/NuGet.DependencyResolver.Core.dll",
+        "lib/net46/NuGet.DependencyResolver.Core.xml",
+        "lib/netstandard1.3/NuGet.DependencyResolver.Core.dll",
+        "lib/netstandard1.3/NuGet.DependencyResolver.Core.xml",
+        "nuget.dependencyresolver.core.4.6.2.nupkg.sha512",
+        "nuget.dependencyresolver.core.nuspec"
+      ]
+    },
+    "NuGet.Frameworks/4.6.2": {
+      "sha512": "iLnbsLorA9kfyZ3YG++p/tV8T5g+VXENtq0ffxgA9sUS65rxFEzVkOIh1MB/wpzGLqjUkY1t5QI2jhxO+cEnJw==",
+      "type": "package",
+      "path": "nuget.frameworks/4.6.2",
+      "files": [
+        ".signature.p7s",
+        "lib/net40/NuGet.Frameworks.dll",
+        "lib/net40/NuGet.Frameworks.xml",
+        "lib/net46/NuGet.Frameworks.dll",
+        "lib/net46/NuGet.Frameworks.xml",
+        "lib/netstandard1.3/NuGet.Frameworks.dll",
+        "lib/netstandard1.3/NuGet.Frameworks.xml",
+        "nuget.frameworks.4.6.2.nupkg.sha512",
+        "nuget.frameworks.nuspec"
+      ]
+    },
+    "NuGet.LibraryModel/4.6.2": {
+      "sha512": "PJsiXt+FZL6RAid+F5UlYnbxcAjUfMVLPcvprTZGqqk8bh37eRQnWfGRwmlppcMZXdAOnci9An5mGtbyH7YVEw==",
+      "type": "package",
+      "path": "nuget.librarymodel/4.6.2",
+      "files": [
+        ".signature.p7s",
+        "lib/net46/NuGet.LibraryModel.dll",
+        "lib/net46/NuGet.LibraryModel.xml",
+        "lib/netstandard1.3/NuGet.LibraryModel.dll",
+        "lib/netstandard1.3/NuGet.LibraryModel.xml",
+        "nuget.librarymodel.4.6.2.nupkg.sha512",
+        "nuget.librarymodel.nuspec"
+      ]
+    },
+    "NuGet.Packaging/4.6.2": {
+      "sha512": "yv3pDOPp/CGfQY5xrgXiJ2xW1FhGWwXY8qVyr4pfRyL9QINFYUquA8GKdUvwicuyvk8gz2K2gYsWbruLNBOppQ==",
+      "type": "package",
+      "path": "nuget.packaging/4.6.2",
+      "files": [
+        ".signature.p7s",
+        "lib/net46/NuGet.Packaging.dll",
+        "lib/net46/NuGet.Packaging.xml",
+        "lib/netstandard1.3/NuGet.Packaging.dll",
+        "lib/netstandard1.3/NuGet.Packaging.xml",
+        "nuget.packaging.4.6.2.nupkg.sha512",
+        "nuget.packaging.nuspec"
+      ]
+    },
+    "NuGet.Packaging.Core/4.6.2": {
+      "sha512": "xJYI/9j9H3avvU7QSXYjjCvAes23HCjbdsebDgqWWPkY3MzEW28MSlyveS/8sRZSRW+iHX1SS46GbDFCXn8soQ==",
+      "type": "package",
+      "path": "nuget.packaging.core/4.6.2",
+      "files": [
+        ".signature.p7s",
+        "lib/net46/NuGet.Packaging.Core.dll",
+        "lib/net46/NuGet.Packaging.Core.xml",
+        "lib/netstandard1.3/NuGet.Packaging.Core.dll",
+        "lib/netstandard1.3/NuGet.Packaging.Core.xml",
+        "nuget.packaging.core.4.6.2.nupkg.sha512",
+        "nuget.packaging.core.nuspec"
+      ]
+    },
+    "NuGet.ProjectModel/4.6.2": {
+      "sha512": "ljuEFqeBsMziS6/eX/JPbnaL3NrBAEbsVrjiFsVizauRVbqV8C7Q/KNU26jJJCCJD0AcqOcfTNOVr9BU4ZC+oA==",
+      "type": "package",
+      "path": "nuget.projectmodel/4.6.2",
+      "files": [
+        ".signature.p7s",
+        "lib/net46/NuGet.ProjectModel.dll",
+        "lib/net46/NuGet.ProjectModel.xml",
+        "lib/netstandard1.3/NuGet.ProjectModel.dll",
+        "lib/netstandard1.3/NuGet.ProjectModel.xml",
+        "nuget.projectmodel.4.6.2.nupkg.sha512",
+        "nuget.projectmodel.nuspec"
+      ]
+    },
+    "NuGet.Protocol/4.6.2": {
+      "sha512": "GE6xdvp2Ycm1vmJSHLT5enLoxLNhYgwyxqmUJl/R0kS9Okzm3Qc/Ivq0rd0BDSHx8pDeoAXnHshc+D4hJOVVaA==",
+      "type": "package",
+      "path": "nuget.protocol/4.6.2",
+      "files": [
+        ".signature.p7s",
+        "lib/net46/NuGet.Protocol.dll",
+        "lib/net46/NuGet.Protocol.xml",
+        "lib/netstandard1.3/NuGet.Protocol.dll",
+        "lib/netstandard1.3/NuGet.Protocol.xml",
+        "nuget.protocol.4.6.2.nupkg.sha512",
+        "nuget.protocol.nuspec"
+      ]
+    },
+    "NuGet.Versioning/4.6.2": {
+      "sha512": "QbzEy78wgzGr1QlRnnHCf6DvbpJM3uCzvgakzoE9dZ3yyIgzfpA8DmO+QCAl6cfYGpdEBdwyUN7+rsz94I5s3g==",
+      "type": "package",
+      "path": "nuget.versioning/4.6.2",
+      "files": [
+        ".signature.p7s",
+        "lib/net46/NuGet.Versioning.dll",
+        "lib/net46/NuGet.Versioning.xml",
+        "lib/netstandard1.3/NuGet.Versioning.dll",
+        "lib/netstandard1.3/NuGet.Versioning.xml",
+        "nuget.versioning.4.6.2.nupkg.sha512",
+        "nuget.versioning.nuspec"
+      ]
+    },
+    "OpenSoftware.DgmlBuilder/1.12.0": {
+      "sha512": "QJ6EXdEvJK851dGKli9tOrLajMHQ3XfgwgTfxy3g7smPJZTMzP7fpeKXoEGRzFDxhzIN90D5vwaw6KubsROdjQ==",
+      "type": "package",
+      "path": "opensoftware.dgmlbuilder/1.12.0",
+      "files": [
+        "lib/net45/OpenSoftware.DgmlBuilder.dll",
+        "lib/netcoreapp2.0/OpenSoftware.DgmlBuilder.dll",
+        "opensoftware.dgmlbuilder.1.12.0.nupkg.sha512",
+        "opensoftware.dgmlbuilder.nuspec"
+      ]
+    },
+    "System.Runtime/4.3.0": {
+      "sha512": "JufQi0vPQ0xGnAczR13AUFglDyVYt4Kqnz1AZaiKZ5+GICq0/1MH/mO/eAJHt/mHW1zjKBJd7kV26SrxddAhiw==",
+      "type": "package",
+      "path": "system.runtime/4.3.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/net462/System.Runtime.dll",
+        "lib/portable-net45+win8+wp80+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/net462/System.Runtime.dll",
+        "ref/netcore50/System.Runtime.dll",
+        "ref/netcore50/System.Runtime.xml",
+        "ref/netcore50/de/System.Runtime.xml",
+        "ref/netcore50/es/System.Runtime.xml",
+        "ref/netcore50/fr/System.Runtime.xml",
+        "ref/netcore50/it/System.Runtime.xml",
+        "ref/netcore50/ja/System.Runtime.xml",
+        "ref/netcore50/ko/System.Runtime.xml",
+        "ref/netcore50/ru/System.Runtime.xml",
+        "ref/netcore50/zh-hans/System.Runtime.xml",
+        "ref/netcore50/zh-hant/System.Runtime.xml",
+        "ref/netstandard1.0/System.Runtime.dll",
+        "ref/netstandard1.0/System.Runtime.xml",
+        "ref/netstandard1.0/de/System.Runtime.xml",
+        "ref/netstandard1.0/es/System.Runtime.xml",
+        "ref/netstandard1.0/fr/System.Runtime.xml",
+        "ref/netstandard1.0/it/System.Runtime.xml",
+        "ref/netstandard1.0/ja/System.Runtime.xml",
+        "ref/netstandard1.0/ko/System.Runtime.xml",
+        "ref/netstandard1.0/ru/System.Runtime.xml",
+        "ref/netstandard1.0/zh-hans/System.Runtime.xml",
+        "ref/netstandard1.0/zh-hant/System.Runtime.xml",
+        "ref/netstandard1.2/System.Runtime.dll",
+        "ref/netstandard1.2/System.Runtime.xml",
+        "ref/netstandard1.2/de/System.Runtime.xml",
+        "ref/netstandard1.2/es/System.Runtime.xml",
+        "ref/netstandard1.2/fr/System.Runtime.xml",
+        "ref/netstandard1.2/it/System.Runtime.xml",
+        "ref/netstandard1.2/ja/System.Runtime.xml",
+        "ref/netstandard1.2/ko/System.Runtime.xml",
+        "ref/netstandard1.2/ru/System.Runtime.xml",
+        "ref/netstandard1.2/zh-hans/System.Runtime.xml",
+        "ref/netstandard1.2/zh-hant/System.Runtime.xml",
+        "ref/netstandard1.3/System.Runtime.dll",
+        "ref/netstandard1.3/System.Runtime.xml",
+        "ref/netstandard1.3/de/System.Runtime.xml",
+        "ref/netstandard1.3/es/System.Runtime.xml",
+        "ref/netstandard1.3/fr/System.Runtime.xml",
+        "ref/netstandard1.3/it/System.Runtime.xml",
+        "ref/netstandard1.3/ja/System.Runtime.xml",
+        "ref/netstandard1.3/ko/System.Runtime.xml",
+        "ref/netstandard1.3/ru/System.Runtime.xml",
+        "ref/netstandard1.3/zh-hans/System.Runtime.xml",
+        "ref/netstandard1.3/zh-hant/System.Runtime.xml",
+        "ref/netstandard1.5/System.Runtime.dll",
+        "ref/netstandard1.5/System.Runtime.xml",
+        "ref/netstandard1.5/de/System.Runtime.xml",
+        "ref/netstandard1.5/es/System.Runtime.xml",
+        "ref/netstandard1.5/fr/System.Runtime.xml",
+        "ref/netstandard1.5/it/System.Runtime.xml",
+        "ref/netstandard1.5/ja/System.Runtime.xml",
+        "ref/netstandard1.5/ko/System.Runtime.xml",
+        "ref/netstandard1.5/ru/System.Runtime.xml",
+        "ref/netstandard1.5/zh-hans/System.Runtime.xml",
+        "ref/netstandard1.5/zh-hant/System.Runtime.xml",
+        "ref/portable-net45+win8+wp80+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.runtime.4.3.0.nupkg.sha512",
+        "system.runtime.nuspec"
+      ]
+    },
+    "System.Runtime.InteropServices/4.3.0": {
+      "sha512": "uv1ynXqiMK8mp1GM3jDqPCFN66eJ5w5XNomaK2XD+TuCroNTLFGeZ+WCmBMcBDyTFKou3P6cR6J/QsaqDp7fGQ==",
+      "type": "package",
+      "path": "system.runtime.interopservices/4.3.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/net462/System.Runtime.InteropServices.dll",
+        "lib/net463/System.Runtime.InteropServices.dll",
+        "lib/portable-net45+win8+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/net462/System.Runtime.InteropServices.dll",
+        "ref/net463/System.Runtime.InteropServices.dll",
+        "ref/netcore50/System.Runtime.InteropServices.dll",
+        "ref/netcore50/System.Runtime.InteropServices.xml",
+        "ref/netcore50/de/System.Runtime.InteropServices.xml",
+        "ref/netcore50/es/System.Runtime.InteropServices.xml",
+        "ref/netcore50/fr/System.Runtime.InteropServices.xml",
+        "ref/netcore50/it/System.Runtime.InteropServices.xml",
+        "ref/netcore50/ja/System.Runtime.InteropServices.xml",
+        "ref/netcore50/ko/System.Runtime.InteropServices.xml",
+        "ref/netcore50/ru/System.Runtime.InteropServices.xml",
+        "ref/netcore50/zh-hans/System.Runtime.InteropServices.xml",
+        "ref/netcore50/zh-hant/System.Runtime.InteropServices.xml",
+        "ref/netcoreapp1.1/System.Runtime.InteropServices.dll",
+        "ref/netstandard1.1/System.Runtime.InteropServices.dll",
+        "ref/netstandard1.1/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.1/de/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.1/es/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.1/fr/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.1/it/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.1/ja/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.1/ko/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.1/ru/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.1/zh-hans/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.1/zh-hant/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.2/System.Runtime.InteropServices.dll",
+        "ref/netstandard1.2/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.2/de/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.2/es/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.2/fr/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.2/it/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.2/ja/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.2/ko/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.2/ru/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.2/zh-hans/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.2/zh-hant/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.3/System.Runtime.InteropServices.dll",
+        "ref/netstandard1.3/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.3/de/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.3/es/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.3/fr/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.3/it/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.3/ja/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.3/ko/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.3/ru/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.3/zh-hans/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.3/zh-hant/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.5/System.Runtime.InteropServices.dll",
+        "ref/netstandard1.5/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.5/de/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.5/es/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.5/fr/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.5/it/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.5/ja/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.5/ko/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.5/ru/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.5/zh-hans/System.Runtime.InteropServices.xml",
+        "ref/netstandard1.5/zh-hant/System.Runtime.InteropServices.xml",
+        "ref/portable-net45+win8+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.runtime.interopservices.4.3.0.nupkg.sha512",
+        "system.runtime.interopservices.nuspec"
+      ]
+    },
+    "System.ValueTuple/4.4.0": {
+      "sha512": "BahUww/+mdP4ARCAh2RQhQTg13wYLVrBb9SYVgW8ZlrwjraGCXHGjo0oIiUfZ34LUZkMMR+RAzR7dEY4S1HeQQ==",
+      "type": "package",
+      "path": "system.valuetuple/4.4.0",
+      "files": [
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.ValueTuple.dll",
+        "lib/net461/System.ValueTuple.xml",
+        "lib/net47/System.ValueTuple.dll",
+        "lib/net47/System.ValueTuple.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.0/System.ValueTuple.dll",
+        "lib/netstandard1.0/System.ValueTuple.xml",
+        "lib/netstandard2.0/_._",
+        "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
+        "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net461/System.ValueTuple.dll",
+        "ref/net461/System.ValueTuple.xml",
+        "ref/net47/System.ValueTuple.dll",
+        "ref/net47/System.ValueTuple.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard2.0/_._",
+        "ref/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
+        "ref/portable-net40+sl4+win8+wp8/System.ValueTuple.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.valuetuple.4.4.0.nupkg.sha512",
+        "system.valuetuple.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.6.2": [
+      "McMaster.Extensions.CommandLineUtils >= 2.2.1",
+      "NuGet.ProjectModel >= 4.6.2",
+      "OpenSoftware.DgmlBuilder >= 1.12.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Code\\scrap\\DepGraph\\packages": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Code\\scrap\\DepGraph\\DepGraph\\DepGraph.csproj",
+      "projectName": "DepGraph",
+      "projectPath": "C:\\Code\\scrap\\DepGraph\\DepGraph\\DepGraph.csproj",
+      "packagesPath": "C:\\Code\\scrap\\DepGraph\\packages",
+      "outputPath": "C:\\Code\\scrap\\DepGraph\\DepGraph\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Code\\scrap\\DepGraph\\NuGet.Config",
+        "C:\\NuGet.Config",
+        "C:\\Users\\kmn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+      ],
+      "originalTargetFrameworks": [
+        "net462"
+      ],
+      "sources": {
+        "http://nuget1ca2/nuget/threepwood_master": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net462": {
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net462": {
+        "dependencies": {
+          "McMaster.Extensions.CommandLineUtils": {
+            "target": "Package",
+            "version": "[2.2.1, )"
+          },
+          "NuGet.ProjectModel": {
+            "target": "Package",
+            "version": "[4.6.2, )"
+          },
+          "OpenSoftware.DgmlBuilder": {
+            "target": "Package",
+            "version": "[1.12.0, )"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win7-x86": {
+        "#import": []
+      }
+    }
+  }
+}
