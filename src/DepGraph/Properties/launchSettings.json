@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "DepGraph": {
+      "commandName": "Project",
+      "commandLineArgs": "..\\..\\..\\obj\\project.assets.json"
+    }
+  }
+}

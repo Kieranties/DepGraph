@@ -22,7 +22,7 @@ namespace DepGraph
                 .AddConsole();
 
             // Invoke the command
-            var app = new CommandLineApplication<Main>();
+            var app = new CommandLineApplication<Graph>();
             app
                 .Conventions
                 .UseDefaultConventions()
