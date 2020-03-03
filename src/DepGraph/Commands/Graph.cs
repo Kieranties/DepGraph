@@ -2,7 +2,6 @@
 using DepGraph.Serialization;
 using McMaster.Extensions.CommandLineUtils;
 using Microsoft.Extensions.Logging;
-using NuGet.LibraryModel;
 using NuGet.ProjectModel;
 using OpenSoftware.DgmlTools;
 using OpenSoftware.DgmlTools.Analyses;
@@ -40,7 +39,7 @@ namespace DepGraph.Commands
         public string Destination { get; set; } = Environment.CurrentDirectory;
 
         [Option("-n", Description = "The name for the dgml file.")]
-        public string Name { get; set; } = "generated";
+        public string Name { get; set; }
 
         [Option("-m", Description = "Write a map instead of a dgml")]
         public bool Map { get; set; } = false;
@@ -48,6 +47,11 @@ namespace DepGraph.Commands
         public void OnExecute(CommandLineApplication app)
         {
             var lockFile = _lockFileReader.Read(Source, new NugetLoggerWrapper(_logger));
+            if (string.IsNullOrWhiteSpace(Name))
+            {
+                Name = lockFile.PackageSpec.Name;
+            }
+
             if(Map)
             {
                 BuildMap(lockFile);

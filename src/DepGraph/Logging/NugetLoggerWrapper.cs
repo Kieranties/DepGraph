@@ -39,7 +39,12 @@ namespace DepGraph.Logging
             }
         }
 
-        public void Log(Nuget.ILogMessage message) => Log(message.Level, message.Message);
+        public void Log(Nuget.ILogMessage message)
+        {
+            if (message == null) return;
+
+            Log(message.Level, message.Message);
+        }
         
         public Task LogAsync(Nuget.LogLevel level, string data)
         {

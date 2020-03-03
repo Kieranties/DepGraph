@@ -17,7 +17,8 @@ namespace DepGraph
                 .BuildServiceProvider();
             
             // Invoke the command
-            var app = new CommandLineApplication<Graph>();
+            using var app = new CommandLineApplication<Graph>();
+
             app
                 .Conventions
                 .UseDefaultConventions()
