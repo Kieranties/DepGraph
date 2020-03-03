@@ -13,14 +13,9 @@ namespace DepGraph
             // Build services
             var services = new ServiceCollection()
                 .AddSingleton<ILockFileReader, DefaultLockFileReader>()
-                .AddLogging()
+                .AddLogging(builder => builder.AddConsole())
                 .BuildServiceProvider();
-
-            // Configure logging
-            services
-                .GetRequiredService<ILoggerFactory>()
-                .AddConsole();
-
+            
             // Invoke the command
             var app = new CommandLineApplication<Graph>();
             app

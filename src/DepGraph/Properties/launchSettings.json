@@ -1,8 +1,16 @@
 {
-  "profiles": {
-    "DepGraph": {
-      "commandName": "Project",
-      "commandLineArgs": "..\\..\\..\\obj\\project.assets.json"
+    "profiles": {
+        "DepGraph": {
+            "commandName": "Project",
+            "commandLineArgs": "..\\..\\..\\obj\\project.assets.json"
+        },
+        "DepGraph - Test": {
+            "commandName": "Project",
+            "commandLineArgs": "C:\\code\\CluedIn\\CluedIn\\Code\\Tool.AdminRepairData\\obj\\project.assets.json -i"
+        },
+        "DepGraph - TestMap": {
+            "commandName": "Project",
+            "commandLineArgs": "C:\\code\\CluedIn\\CluedIn\\Code\\Reports\\obj\\project.assets.json -m"
+        }
     }
-  }
 }
