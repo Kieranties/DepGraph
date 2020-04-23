@@ -2,6 +2,7 @@
 using DepGraph.Serialization;
 using McMaster.Extensions.CommandLineUtils;
 using Microsoft.Extensions.Logging;
+using NuGet.Packaging.Core;
 using NuGet.ProjectModel;
 using OpenSoftware.DgmlTools;
 using OpenSoftware.DgmlTools.Analyses;
@@ -35,6 +36,9 @@ namespace DepGraph.Commands
         [Option("-i", Description = "Immediates only")]
         public bool ImmediateOnly { get; set; } = false;
 
+        [Option("-l", Description = "Immediates only")]
+        public bool Layers { get; set; } = false;
+
         [Option("-d|--destination <PATH>", Description = "The output path for the dgml file.")]
         public string Destination { get; set; } = Environment.CurrentDirectory;
 
@@ -52,9 +56,15 @@ namespace DepGraph.Commands
                 Name = lockFile.PackageSpec.Name;
             }
 
-            if(Map)
+            if (Map)
             {
                 BuildMap(lockFile);
+                return;
+            }
+
+            if (Layers)
+            {
+                BuildLayers(lockFile);
                 return;
             }
 
@@ -84,7 +94,7 @@ namespace DepGraph.Commands
 
             foreach (var dep in lockFile.Targets.First().Libraries)
             {
-                foreach(var reference in dep.Dependencies)
+                foreach (var reference in dep.Dependencies)
                 {
                     if (countMap.Keys.Contains(reference.Id))
                     {
@@ -94,13 +104,99 @@ namespace DepGraph.Commands
             }
 
             using var writer = new StreamWriter(Path.Combine(Destination, $"{Name}.txt"));
-            foreach(var kvp in countMap)
+            foreach (var kvp in countMap)
             {
                 var line = $"{kvp.Value}\t{kvp.Key}";
                 Console.WriteLine(line);
                 writer.WriteLine(line);
             }
+        }
 
+        private void BuildLayers(LockFile lockFile)
+        {
+            var deps = lockFile.Targets.First().Libraries;
+            var spec = lockFile.PackageSpec;
+
+            var packages = spec.TargetFrameworks.First().Dependencies;
+            var packageNames = packages.Select(d => d.Name).ToArray();
+            deps = deps
+                .Where(l => l.Type == "project").ToArray();
+
+            var layerMap = deps.ToDictionary(x => x, x => (false, 0));
+
+            PopulateLayerMap(layerMap);
+
+            var libBuilder = new NodeBuilder<LockFileTargetLibrary>(x =>
+            {
+                return new Node
+                {
+                    Id = x.Name,
+                    Category = x.Type
+                };
+            });
+
+            var linkBuilder = new LinkBuilder<LockFileTargetLibrary>(
+                x =>
+                {
+                    var layer = layerMap[x].Item2;
+
+                    return new Link
+                    {
+                        Source = $"Layer [{layer}]",
+                        Target = x.Name,
+                        IsContainment = true
+                    };
+                });
+
+            var groupLinkBuilder = new LinksBuilder<int>(
+                x => Enumerable
+                        .Range(0, x)
+                        .Select(i =>
+                            new Link
+                            {
+                                Source = $"Layer [{i}]",
+                                Target = $"Layer [{i + 1}]",
+                            }
+                        ));
+
+            var builder = new DgmlBuilder(new CategoryColorAnalysis())
+            {
+                NodeBuilders = new NodeBuilder[] { libBuilder },
+                LinkBuilders = new LinkBuilder[] { linkBuilder, groupLinkBuilder }
+            };
+
+            var groups = layerMap.Values.Max(x => x.Item2);
+            var graph = builder.Build(layerMap.Keys, new object[] { groups } );
+            graph.WriteToFile(Path.Combine(Destination, $"{Name}.layers.dgml"));
+
+        }
+
+        private void PopulateLayerMap(Dictionary<LockFileTargetLibrary, (bool mapped, int layer)> map)
+        {
+            int InnerLoop(LockFileTargetLibrary lib)
+            {
+                var entry = map[lib];
+                if (entry.mapped)
+                    return entry.layer;
+
+                var layer = entry.layer;
+                foreach (var package in lib.Dependencies)
+                {
+                    var dep = map.Keys.FirstOrDefault(x => x.Name == package.Id);
+                    if (dep == null) continue;
+                    var depLayer = InnerLoop(dep);
+                    layer = Math.Max(layer, depLayer + 1);
+                }
+
+                map[lib] = (true, layer);
+                return layer;
+            }
+
+
+            foreach (var lib in map.Keys.ToArray())
+            {
+                InnerLoop(lib);
+            }
         }
 
         private void BuildGraph(string[] directRefs, PackageSpec spec, IList<LockFileTargetLibrary> libs)

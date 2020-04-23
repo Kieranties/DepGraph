@@ -11,6 +11,10 @@
         "DepGraph - TestMap": {
             "commandName": "Project",
             "commandLineArgs": "C:\\code\\CluedIn\\CluedIn\\Code\\Reports\\obj\\project.assets.json -m"
+        },
+        "DepGraph - Layers": {
+            "commandName": "Project",
+            "commandLineArgs": "C:\\code\\CluedIn\\CluedIn\\.kmn\\stubproj\\obj\\project.assets.json -l"
         }
     }
 }
